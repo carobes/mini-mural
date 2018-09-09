@@ -15,6 +15,7 @@ class CanvasContainer extends Component {
     }
 
     handleDoubleClick(e) {
+        e.preventDefault()
         this.setState({
             notes: [...this.state.notes, <NoteContainer x={e.clientX - 50} y={e.clientY - 50} key={this.state.id} />],
             id: this.state.id + 1
@@ -22,7 +23,7 @@ class CanvasContainer extends Component {
     }
 
     render() {
-        console.log(this.state.notes)
+
         return (
             <div className={'canvas'} onDoubleClick={this.handleDoubleClick}>
                 {this.state.notes.map(note => note)}

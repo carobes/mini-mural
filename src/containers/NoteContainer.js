@@ -8,12 +8,20 @@ class NoteContainer extends Component {
         this.state = {
 
         }
+        this.handleDblClick = this.handleDblClick.bind(this)
+
+    }
+
+    handleDblClick(e) {
+        e.preventDefault()
+        e.stopPropagation()
+        console.log('click note')
     }
 
     render() {
         return (
             <div>
-                <Note x={this.props.x} y={this.props.y} />
+                <Note x={this.props.x} y={this.props.y} handleDblClick={this.handleDblClick} />
             </div>
         )
     }

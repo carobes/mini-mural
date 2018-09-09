@@ -8,25 +8,24 @@ class CanvasContainer extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            x: 0,
-            y: 0
+            id: 1,
+            notes: [],
         }
         this.handleDoubleClick = this.handleDoubleClick.bind(this)
     }
 
     handleDoubleClick(e) {
         this.setState({
-            x: e.clientX - 50,
-            y: e.clientY - 50
+            notes: [...this.state.notes, <NoteContainer x={e.clientX - 50} y={e.clientY - 50} key={this.state.id} />],
+            id: this.state.id + 1
         })
-        console.log('coordenada x', e.clientX, "coordenada y", e.clientY)
     }
 
     render() {
+        console.log(this.state.notes)
         return (
             <div className={'canvas'} onDoubleClick={this.handleDoubleClick}>
-                <NoteContainer x={this.state.x} y={this.state.y} />
-
+                {this.state.notes.map(note => note)}
             </div>
         )
     }

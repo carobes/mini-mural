@@ -14,8 +14,6 @@ class NoteContainer extends Component {
         return (
             <div>
                 <Note x={this.props.x} y={this.props.y} />
-
-
             </div>
         )
     }

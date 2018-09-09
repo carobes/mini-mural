@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NoteContainer from './containers/NoteContainer.js'
 import CanvasContainer from './containers/CanvasContainer.js'
 import './App.css'
 
@@ -23,7 +22,6 @@ class App extends Component {
       <div>
 
         <CanvasContainer />
-        {/* <NoteContainer handleDoubleClick={this.handleDoubleClick}></NoteContainer> */}
 
 
       </div>

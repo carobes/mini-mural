@@ -1,12 +1,13 @@
-.note {
-background-color: #fcfc85;
-height: 100px;
-width: 100px;
-box-shadow: 0 1px 6px rgb(0, 0, 0, .3);
-display: block;
-position: absolute;
-text-align: center;
-border: 0;
-z-index: 1;
+.noteContainer {
+    background-color: #fcfc85;
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 1px 6px rgb(0, 0, 0, .3);
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    word-wrap: break-word;
+    border: 2px solid transparent;
 }
-
